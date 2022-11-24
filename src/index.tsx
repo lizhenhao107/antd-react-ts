@@ -8,8 +8,8 @@ import { ConfigProvider } from 'antd';
 import zh_CN from 'antd/lib/locale-provider/zh_CN'
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux'
-import {store} from './store/index'
-import { HashRouter as Router } from "react-router-dom";
+import { store } from './store/index'
+import { HashRouter } from "react-router-dom";
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
@@ -17,9 +17,9 @@ root.render(
   <React.StrictMode>
     <ConfigProvider locale={zh_CN}>
       <Provider store={store}>
-        <Router>
-        <App />
-        </Router>
+        <HashRouter>
+          <App />
+        </HashRouter>
       </Provider>
     </ConfigProvider>
   </React.StrictMode>
